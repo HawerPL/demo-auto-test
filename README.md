@@ -1,10 +1,10 @@
 # demo-auto-test
 
 ## Opis
-Projekt testów automatycznych dla prostej aplikacji napisanej w Pythonie z użyciem Flask z użyciem Selenide.
+Projekt testów automatycznych korzystających z Selenide dla prostej aplikacji napisanej w Pythonie z użyciem Flask.
 
 Dostępne moduły:
- - logowanie (TODO)
+ - logowanie
  - rejestracja (TODO)
 
 ## Konfiguracja

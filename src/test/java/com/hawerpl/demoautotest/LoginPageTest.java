@@ -14,6 +14,7 @@ import static com.codeborne.selenide.WebDriverConditions.url;
 public class LoginPageTest {
     LoginPage loginPage = new LoginPage();
     RegisterPage registerPage = new RegisterPage();
+    HomePage homePage = new HomePage();
     Config config = new Config();
 
     @BeforeAll
@@ -83,5 +84,20 @@ public class LoginPageTest {
 
         webdriver().shouldHave(url(config.getProperty("app_url") + "/register"));
         registerPage.registerForm.shouldBe(visible.because("Formularz rejestracji nie jest widoczny"));
+    }
+
+    @Test
+    public void loginSuccess(){
+        loginPage.usernameInput.setValue(config.getProperty("default_username"));
+        loginPage.passwordInput.setValue(config.getProperty("default_password"));
+        loginPage.loginButton.click();
+
+        homePage.welcomeMessage.shouldHave(text(String.format("Hi, %s!", config.getProperty("default_username")))
+                .because("Wiadomość powitalna jest niepoprawna"));
+    }
+
+    @Test
+    public void logout(){
+
     }
 }

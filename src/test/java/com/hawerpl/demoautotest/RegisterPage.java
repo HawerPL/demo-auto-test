@@ -1,5 +1,6 @@
 package com.hawerpl.demoautotest;
 
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.$;
@@ -12,7 +13,7 @@ public class RegisterPage {
     public SelenideElement passwordInput = $("input[id='password']");
     public SelenideElement confirmPasswordInput = $("input[id='confirmPassword']");
     public SelenideElement registerButton = $("input[name='registerSubmit']");
-    public SelenideElement errorMessages = $("#form-register .form-error");
+    public ElementsCollection errorMessages = $("#form-register").findAll(".form-error");
     public SelenideElement loginLink = $("#login-link");
 
 }
