@@ -8,21 +8,21 @@ Dostępne moduły:
  - rejestracja
 
 ## Konfiguracja
-Adres frontendu aplikacji:
+- Adres frontendu aplikacji:
 app_url=http\://127.0.0.1\:5000
 
-Poświadczenia użytkownika zarejestrowanego w systemie:
+- Poświadczenia użytkownika zarejestrowanego w systemie:
 default_email=admin@test.com
 default_password=admin1234
 default_username=admin1234
 
-Nieprawidłowy adres email:
+- Nieprawidłowy adres email:
 invalid_email=mail
 
-Iteracja testów (automatycznie aktualizowana po testach modułu):
+- Iteracja testów (automatycznie aktualizowana po testach modułu):
 iteration=11
 
-Ustawienia bezpieczeństwa oraz poświadczeń ich niespełniających:
+- Ustawienia bezpieczeństwa oraz poświadczeń ich niespełniających:
 min_password_length=6
 min_username_length=4
 short_password=aDmIn
