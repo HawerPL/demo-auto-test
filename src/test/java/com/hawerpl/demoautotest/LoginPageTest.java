@@ -15,12 +15,17 @@ public class LoginPageTest {
     LoginPage loginPage = new LoginPage();
     RegisterPage registerPage = new RegisterPage();
     HomePage homePage = new HomePage();
-    Config config = new Config();
+    static Config config = new Config();
 
     @BeforeAll
     public static void setUpAll() {
         Configuration.browserSize = "1280x800";
         SelenideLogger.addListener("allure", new AllureSelenide());
+    }
+
+    @AfterAll
+    public static void endModule(){
+        config.incrementProperty("iteration");
     }
 
     @BeforeEach
